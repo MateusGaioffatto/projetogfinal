@@ -26,8 +26,9 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #e0f7fa, #bbdefb);
-  padding: 20px;
+  /* padding: 20px; */
   transition: var(--transition);
+  margin: 0;
 }
 
 body.dark-mode {
@@ -68,8 +69,15 @@ body.dark-mode .logo {
 body.dark-mode .tagline {
   color: #b0b0b0;
 }
-
 .homePageSearchDiv {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+.homePageBarraDePesquisa {
+  position: relative;
+  left: 12%;
+
   background: white;
   display: inline-flex;
   align-items: center;
@@ -91,7 +99,7 @@ body.dark-mode .tagline {
   }
 }
 
-body.dark-mode .homePageSearchDiv {
+body.dark-mode .homePageBarraDePesquisa {
   background: #2d3748;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
@@ -149,7 +157,10 @@ body.dark-mode .homePageSearchButton:hover #homePageSearchIconID {
   color: white;
 }
 
-.search-options {
+.barraDePesquisaOpcoes {
+  position: relative;
+  left: 12%;
+  margin-left: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -157,6 +168,12 @@ body.dark-mode .homePageSearchButton:hover #homePageSearchIconID {
   flex-wrap: wrap;
 }
 
+/* Hide options when screen is small */
+@media (max-width: 600px) {
+  .barraDePesquisaOpcoes {
+    display: none !important;
+  }
+}
 .option-btn {
   background: white;
   border: none;

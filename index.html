@@ -22,21 +22,22 @@
       <div class="tagline">Pesquisa segura em lojas confiáveis</div> <!-- HOMEPAGE: SUBTÍTULO -->
     </header>
 
-    <div class="homePageSearchDiv" id="homePageSearchDivID"> <!-- HOMEPAGE: BARRA DE PESQUISA CONTEÚDOS -->
-      <input type="text" class="homePageSearchInput" id="homePageSearchInputID" 
-      placeholder="O que você está procurando?" autocomplete="off"> <!-- HOMEPAGE: BARRA DE PESQUISA -->
-      <button class="homePageSearchButton" id="homePageSearchButtonID" aria-label="Search"> <!-- HOMEPAGE: BARRA DE PESQUISA, BOTÃO -->
-        <i class="material-icons" id="homePageSearchIconID">search</i> <!-- HOMEPAGE: BARRA DE PESQUISA, BOTÃO, ÍCONE -->
-      </button>
-    </div>
-
-    <div class="search-options">
-      <button class="option-btn" id="clearSearch">
-        <i class="fas fa-eraser"></i> Limpar
-      </button>
-      <button class="option-btn" id="showHistory">
-        <i class="fas fa-history"></i> Histórico
-      </button>
+    <div class="homePageSearchDiv" id="homePageSearchDivID"> <!-- HOMEPAGE: BARRA DE PESQUISA E BOTÕES-->
+      <div class="homePageBarraDePesquisa" id="homePageBarraDePesquisaID"> <!-- HOMEPAGE: BARRA DE PESQUISA CONTEÚDOS -->
+        <input type="text" class="homePageSearchInput" id="homePageSearchInputID" 
+        placeholder="O que você está procurando?" autocomplete="off"> <!-- HOMEPAGE: BARRA DE PESQUISA -->
+          <button class="homePageSearchButton" id="homePageSearchButtonID" aria-label="Search"> <!-- HOMEPAGE: BARRA DE PESQUISA, BOTÃO -->
+            <i class="material-icons" id="homePageSearchIconID">search</i> <!-- HOMEPAGE: BARRA DE PESQUISA, BOTÃO, ÍCONE -->
+          </button>
+      </div>
+      <div class="barraDePesquisaOpcoes">
+        <button class="option-btn" id="clearSearch">
+          <i class="fas fa-eraser"></i> Limpar
+        </button>
+        <button class="option-btn" id="showHistory">
+          <i class="fas fa-history"></i> Histórico
+        </button>
+      </div>
     </div>
     
     <div class="homePageProdutosDiv" id="homePageProdutosDivID">
