@@ -1,8 +1,10 @@
 // Elementos DOM
 const homePageSearchInput = document.getElementById("homePageSearchInputID");
+const homePageSearchButton = document.getElementById("homePageSearchButtonID");
+
 const homePageProdutosDiv = document.getElementById("homePageProdutosDivID");
 const homePageProdutosUl = document.getElementById("homePageProdutosUlID");
-const themeToggle = document.getElementById("themeToggle");
+const themeToggle = document.getElementById("homePageModoEscuroClaroID");
 const clearSearchBtn = document.getElementById("clearSearch");
 const showHistoryBtn = document.getElementById("showHistory");
 const recentSearches = document.getElementById("recentSearches");
@@ -53,14 +55,22 @@ function disableDarkMode() {
 }
 
 // Mostrar/ocultar lista de produtos ao digitar
-homePageSearchInput.addEventListener("input", function() {
-  searchInputText = homePageSearchInput.value;
-  homePageProdutosDiv.style.display = searchInputText !== "" ? "flex" : "none";
-  
+homePageSearchInput.addEventListener("keyup", function() {
+    searchInputText = homePageSearchInput.value;
+    if (event.key === 'Enter') {
+      // homePageProdutosDiv.style.display = searchInputText !== "" ? "flex" : "none";
+      homePageProdutosDiv.style.display = "flex";
+    }  
+    else if (searchInputText == "") {
+      // homePageProdutosDiv.classList.add('fade-in');
+      homePageProdutosDiv.style.display = "none";
+    }
+  });
+homePageSearchButton.addEventListener('click', function() {
   if (searchInputText !== "") {
-    homePageProdutosDiv.classList.add('fade-in');
+    homePageProdutosDiv.style.display = "flex";
   }
-});
+})
 
 // Limpar pesquisa
 clearSearchBtn.addEventListener('click', function() {

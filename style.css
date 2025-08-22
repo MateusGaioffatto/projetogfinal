@@ -35,7 +35,7 @@ body.dark-mode {
   color: var(--light);
 }
 
-.container {
+.homePageConteudoCentral {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -141,12 +141,12 @@ body.dark-mode #homePageSearchIconID {
 }
 
 .homePageSearchButton:hover #homePageSearchIconID {
-  color: var(--accent);
+  color: black;
   transform: scale(1.1);
 }
 
 body.dark-mode .homePageSearchButton:hover #homePageSearchIconID {
-  color: #ff79a9;
+  color: white;
 }
 
 .search-options {
@@ -341,7 +341,7 @@ body.dark-mode .indicator.active {
   background: #6c8eff;
 }
 
-.theme-toggle {
+.homePageModoEscuroClaro {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -359,7 +359,7 @@ body.dark-mode .indicator.active {
   transition: var(--transition);
 }
 
-body.dark-mode .theme-toggle {
+body.dark-mode .homePageModoEscuroClaro {
   background: var(--dark);
   color: var(--light);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
